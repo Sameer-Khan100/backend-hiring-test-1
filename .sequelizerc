@@ -1,0 +1,8 @@
+const path = require('path');
+
+module.exports = {
+  config: path.resolve('config', 'config.json'),
+  'models-path': path.resolve('src', 'Calls', 'models'), // Model inside feature module
+  'seeders-path': path.resolve('seeders'),
+  'migrations-path': path.resolve('migrations'), // Migrations outside `src/`
+};
