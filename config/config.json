@@ -1,0 +1,13 @@
+{
+    "development": {
+      "username": "ubis4lmctj1up5",
+      "password": "p3bc90edb6bad9e84a6493b8c4822448fe4620fc652b6fa43e702ec7d5de35d61112021",
+      "database": "d6f9oh9avdi5pk",
+      "host": "c3nv2ev86aje4j.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com",
+      "port": 5432,
+      "dialect": "postgres"
+    }
+}
+
+
+  
