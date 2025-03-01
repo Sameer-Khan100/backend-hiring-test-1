@@ -10,13 +10,19 @@ import { VoicemailModule } from './Voicemails/voicemail.module';
     SequelizeModule.forRoot({
       dialect: 'postgres',
       host: process.env.DATABASE_HOST,
-      port: Number(process.env.DATABASE_PORT) || 5433,
+      port: Number(process.env.DATABASE_PORT) || 5432,
       username: process.env.DATABASE_USER,
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
       autoLoadModels: true,
       synchronize: false,
-    }),
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false, // Allow self-signed certificates
+        },
+      },
+    }),    
     CallModule,
     VoicemailModule,
   ],
